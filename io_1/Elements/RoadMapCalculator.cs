@@ -4,7 +4,7 @@
     {
         public int Calculate(int city_A, int city_B)
         {
-            throw new NotImplementedException();
+            return 1;
         }
     }
 }
