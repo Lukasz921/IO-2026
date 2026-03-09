@@ -16,6 +16,7 @@
             {
                 return (int)roadmap.GetRoadMap[(city_B, city_A)];
             }
+            return 0;
             throw new ArgumentException("There is no such connection in roadmap.");
         }
     }

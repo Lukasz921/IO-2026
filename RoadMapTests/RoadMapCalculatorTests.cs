@@ -24,7 +24,11 @@ namespace RoadMapTests
         [Fact]
         public void Calculate_NonExistingCity_ThrowsException()
         {
-
+            RoadMapCalculator roadmapcalculator = new();
+            RoadMap roadmap = new();
+            var ex = Assert.Throws<ArgumentException>(() =>
+                roadmapcalculator.Calculate("Warszawa", "Andrzej", roadmap));
+            Assert.Equal("There is no such connection in roadmap.", ex.Message);
         }
     }
 }
