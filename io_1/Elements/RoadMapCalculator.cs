@@ -2,13 +2,21 @@
 {
     public class RoadMapCalculator
     {
-        public int Calculate(int city_A, int city_B)
+        public int Calculate(string city_A, string city_B, RoadMap roadmap)
         {
             if (city_A == city_B)
             {
                 throw new ArgumentException("Cities cannot be the same.");
             }
-            return 1;
+            if (roadmap.GetRoadMap.ContainsKey((city_A, city_B)))
+            {
+                return (int)roadmap.GetRoadMap[(city_A, city_B)];
+            }
+            else if (roadmap.GetRoadMap.ContainsKey((city_B, city_A)))
+            {
+                return (int)roadmap.GetRoadMap[(city_B, city_A)];
+            }
+            throw new ArgumentException("There is no such connection in roadmap.");
         }
     }
 }
