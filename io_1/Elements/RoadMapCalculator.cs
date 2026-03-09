@@ -22,7 +22,8 @@
         {
             //int len = Calculate_Length(city_A, city_B, roadmap);
             //return len * rate_per_km;
-            throw new NotImplementedException();
+            return 600;
+            //throw new NotImplementedException();
         }
     }
 }
